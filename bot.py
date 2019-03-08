@@ -4,13 +4,13 @@ import time
 from numpy import *
 
 class Cordinates():
-    replayBtn = (340, 390)
+    replay = (340, 390)
     dinosaur = (171, 395)
 
-def restartGame():
-    pyautogui.click(Cordinates.replayBtn)
+def restart():
+    pyautogui.click(Cordinates.replay)
 
-def pressSpace():
+def press():
     pyautogui.keyDown('space')
     time.sleep(0.05)
     print('Jump')
@@ -24,13 +24,10 @@ def image():
     print(a.sum())
     return(a.sum())
 
+restartGame()
+while True:
+    if(image() != 1530):
+        pressSpace()
+        time.sleep(0.1)
 
-def main():
-    restartGame()
-    while True:
-        if(image() != 1530):
-            pressSpace()
-            time.sleep(0.1)
-
-main()
 
