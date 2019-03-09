@@ -32,5 +32,3 @@ def start():
             time.sleep(0.1)
 		
 start()		
-while True:
-	image()
