@@ -22,7 +22,7 @@ def image():
     image = ImageGrab.grab(box)
     a = array(image)
     print(a.sum())
-    return(a.sum())
+    #return(a.sum())
 
 def start():
     restart()
