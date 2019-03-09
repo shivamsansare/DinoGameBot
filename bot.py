@@ -5,7 +5,7 @@ from numpy import *
 
 class Cordinates():
     replay = (340, 390)
-    dinosaur = (171, 395)
+    dinosaur = (150, 120)
 
 
 def restart():
@@ -18,8 +18,9 @@ def press():
     pyautogui.keyUp('space')
 	
 def image():           
-    box = (Cordinates.dinosaur[0]+10, Cordinates.dinosaur[1]-60, Cordinates.dinosaur[0] + 60, Cordinates.dinosaur[1]+60)
+    box = (Cordinates.dinosaur[0], Cordinates.dinosaur[1], Cordinates.dinosaur[0]+150, Cordinates.dinosaur[1]+180)
     image = ImageGrab.grab(box)
+    #image.show()
     a = array(image)
     print(a.sum())
     return(a.sum())
@@ -27,10 +28,10 @@ def image():
 def start():
     restart()
     while True:
-        if(image() <= 5290760):
+        if(image() <= 20220000):
             press()
             time.sleep(0.1)
 		
 start()		
-while True:
-	image()
+#while True:
+#image()
