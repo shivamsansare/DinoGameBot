@@ -18,7 +18,7 @@ def press():
     pyautogui.keyUp('space')
 	
 def image():           
-    box = (Cordinates.dinosaur[0], Cordinates.dinosaur[1]-60, Cordinates.dinosaur[0] + 60, Cordinates.dinosaur[1]+60)
+    box = (Cordinates.dinosaur[0]+10, Cordinates.dinosaur[1]-60, Cordinates.dinosaur[0] + 60, Cordinates.dinosaur[1]+60)
     image = ImageGrab.grab(box)
     a = array(image)
     print(a.sum())
